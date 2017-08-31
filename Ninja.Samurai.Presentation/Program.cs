@@ -28,5 +28,13 @@ namespace Ninja.Samurai.Presentation
             Bind<IWarrior>().To<Domain.Samurai>().InSingletonScope();
             Bind<IWeapon>().To<Sword>().InSingletonScope();
         }
+    }    
+    public class RangeModule:NinjectModule
+    {
+        public override void Load()
+        {
+            Bind<IWarrior>().To<Domain.Samurai>().InSingletonScope();
+            Bind<IWeapon>().To<Shuriken>().InSingletonScope();
+        }
     }
 }
